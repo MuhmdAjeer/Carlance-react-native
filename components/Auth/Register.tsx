@@ -2,8 +2,10 @@ import React from "react";
 import { Button, Text, TextInput, TouchableOpacity } from "react-native";
 import { View } from "../Themed";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 
 const Register = () => {
+  const navigation = useRouter();
   return (
     <SafeAreaView>
       <View className="h-full flex p-5 justify-center ">
@@ -42,7 +44,15 @@ const Register = () => {
           </View>
           <Text className="font-medium text-gray-500 text-center my-2">
             Already have an account?
-            <Text className="text-main-default font-bold"> Login</Text>
+            <Text
+              onPress={() => {
+                navigation.push("Home");
+              }}
+              className="text-main-default font-bold"
+            >
+              {" "}
+              Login
+            </Text>
           </Text>
         </View>
       </View>
