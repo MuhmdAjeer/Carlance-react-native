@@ -11,7 +11,7 @@ export const unstable_settings = {
 const Index = () => {
   return (
     <>
-      <Stack.Screen options={{ headerShown: true }} />
+      <Stack.Screen options={{ headerShown: false, headerBackTitle: "Back" }} />
       <Register />
     </>
   );
