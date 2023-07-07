@@ -25,7 +25,13 @@ const Register = () => {
             </View>
             <View>
               <TouchableOpacity className="bg-main-default rounded ">
-                <Button color="white" title="Continue" />
+                <Button
+                  onPress={() => {
+                    navigation.push("Verification");
+                  }}
+                  color="white"
+                  title="Continue"
+                />
               </TouchableOpacity>
             </View>
           </View>
@@ -46,7 +52,7 @@ const Register = () => {
             Already have an account?
             <Text
               onPress={() => {
-                navigation.push("Home");
+                navigation.push("Verification");
               }}
               className="text-main-default font-bold"
             >
